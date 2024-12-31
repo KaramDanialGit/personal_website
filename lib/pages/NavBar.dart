@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:js' as js;
+import 'dart:developer' as developer;
 import 'ResumeView.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_icons/simple_icons.dart';
@@ -34,7 +35,9 @@ class NavBar extends StatelessWidget {
                   child: Text(
                     'Karam Danial',
                     style: GoogleFonts.josefinSlab(
-                        textStyle: Theme.of(context).textTheme.displayMedium),
+                      textStyle: Theme.of(context).textTheme.displayMedium,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -65,7 +68,7 @@ class NavBar extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ResumeView(),
+                          builder: (context) => ResumeView(),
                         ),
                       ),
                     },

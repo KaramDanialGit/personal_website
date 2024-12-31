@@ -18,9 +18,11 @@ class LightTheme implements ThemeAttrs {
   IconData get icon => Icons.light_mode_outlined;
   @override
   ThemeData get colors => ThemeData(
-      useMaterial3: true,
-      brightness: Brightness.light,
-      colorScheme: const ColorScheme.light());
+        useMaterial3: true,
+        brightness: Brightness.light,
+        colorScheme: const ColorScheme.light(),
+        primaryColor: Colors.white,
+      );
 }
 
 class DarkTheme implements ThemeAttrs {
