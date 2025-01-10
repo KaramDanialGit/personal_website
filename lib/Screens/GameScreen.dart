@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../RotatingCard.dart';
+import '../TitleCard.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key});
@@ -15,18 +16,14 @@ class _GameScreen extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
-      child: Column(
+      decoration: const BoxDecoration(
+        color: const Color.fromRGBO(85, 106, 116, 1),
+      ),
+      child: const Column(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(top: 25),
-            child: Text(
-              "Favourite Games",
-              textAlign: TextAlign.center,
-              style: GoogleFonts.josefinSlab(
-                textStyle: Theme.of(context).textTheme.displayMedium,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            child: TitleCard(title: "Favourite Games"),
           ),
           Spacer(),
           const Row(
@@ -35,17 +32,22 @@ class _GameScreen extends State<GameScreen> {
               Spacer(),
               RotatingCard(
                 background: "HKBackground.jpg",
-                subject: "HollowKnightRight.png",
+                subject: "logo_main.png",
+                url: "https://www.hollowknight.com/",
               ),
               Spacer(),
               RotatingCard(
                 background: "DSBackground.jpg",
-                subject: "DSCharacter.png",
+                subject: "ds_logo.png",
+                url:
+                    "https://store.steampowered.com/app/374320/DARK_SOULS_III/",
               ),
               Spacer(),
               RotatingCard(
                 background: "MGRBackground.jpg",
-                subject: "MGRCharacter.png",
+                subject: "mgr_logo.png",
+                url:
+                    "https://store.steampowered.com/app/235460/METAL_GEAR_RISING_REVENGEANCE/",
               ),
               Spacer(),
             ],

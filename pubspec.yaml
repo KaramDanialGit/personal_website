@@ -44,6 +44,7 @@ dependencies:
   flutter_media_downloader: ^1.0.6
   typewritertext: ^3.0.9
   webview_flutter: ^4.10.0
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:

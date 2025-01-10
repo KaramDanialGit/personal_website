@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:typewritertext/typewritertext.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../TitleCard.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -28,29 +29,7 @@ class IntroScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            width: 2,
-                          ),
-                          borderRadius: BorderRadius.circular(4),
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        width: 440,
-                        height: 70,
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
-                        child: TypeWriter.text(
-                          'Software Engineer',
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.josefinSlab(
-                            textStyle:
-                                Theme.of(context).textTheme.displayMedium,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          duration: const Duration(milliseconds: 50),
-                        ),
-                      ),
+                      TitleCard(title: "Software Engineer"),
                       Padding(
                         padding: EdgeInsets.fromLTRB(30, 20, 30, 30),
                         child: Text(
@@ -62,12 +41,13 @@ class IntroScreen extends StatelessWidget {
                           "Major:\n"
                           "Biomedical Engineering and Computing\n\n"
                           "Interests:\n"
-                          "Software - BJJ - Caffeine - Gaming - Guitar",
+                          "Software - Guitar - Caffeine - Gaming",
                           style: GoogleFonts.josefinSlab(
                             textStyle:
                                 Theme.of(context).textTheme.displayMedium,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
+                            color: Colors.black,
                           ),
                         ),
                       ),
@@ -77,6 +57,7 @@ class IntroScreen extends StatelessWidget {
                 const SizedBox(width: 50),
                 Container(
                   width: 440,
+                  height: 550,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
@@ -86,7 +67,10 @@ class IntroScreen extends StatelessWidget {
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(4),
-                    child: Image.asset("Me.jpg", width: 440),
+                    child: ClipRRect(
+                      child:
+                          Image.asset("Me.jpg", width: 440, fit: BoxFit.cover),
+                    ),
                   ),
                 ),
               ],
