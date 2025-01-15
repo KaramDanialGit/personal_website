@@ -31,21 +31,21 @@ class _GameScreen extends State<GameScreen> {
             children: <Widget>[
               Spacer(),
               RotatingCard(
-                background: "HKBackground.jpg",
-                subject: "logo_main.png",
+                background: "assets/images/HKBackground.jpg",
+                subject: "assets/images/logo_main.png",
                 url: "https://www.hollowknight.com/",
               ),
               Spacer(),
               RotatingCard(
-                background: "DSBackground.jpg",
-                subject: "ds_logo.png",
+                background: "assets/images/DSBackground.jpg",
+                subject: "assets/images/ds_logo.png",
                 url:
                     "https://store.steampowered.com/app/374320/DARK_SOULS_III/",
               ),
               Spacer(),
               RotatingCard(
-                background: "MGRBackground.jpg",
-                subject: "mgr_logo.png",
+                background: "assets/images/MGRBackground.jpg",
+                subject: "assets/images/mgr_logo.png",
                 url:
                     "https://store.steampowered.com/app/235460/METAL_GEAR_RISING_REVENGEANCE/",
               ),

@@ -72,7 +72,7 @@ class ResumeView extends StatelessWidget {
                               size: 28,
                             ),
                             onTap: () =>
-                                {download('/assets/Nov_Resume_KD.pdf')},
+                                {download('assets/pdfs/Nov_Resume_KD.pdf')},
                           ),
                         ),
                       ),
@@ -85,7 +85,7 @@ class ResumeView extends StatelessWidget {
             ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 1280),
               child: const Image(
-                image: AssetImage('resume_image.jpg'),
+                image: AssetImage('assets/images/resume_image.jpg'),
               ),
             ),
           ],

@@ -3,7 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import './CarouselCard.dart';
 
 Map<String, String> C1 = {
-  "image_path": "hit_play_technologies_logo.png",
+  "image_path": "assets/images/hit_play_technologies_logo.png",
   "title": "IoT Device Observability",
   "description":
       "Designed an end-to-end observability feature collecting device network data capable of detecting IoT device defects and displaying them on user dashboards",
@@ -12,7 +12,7 @@ Map<String, String> C1 = {
 };
 
 Map<String, String> C2 = {
-  "image_path": "Git_Logo.png",
+  "image_path": "assets/images/Git_Logo.png",
   "title": "Data Structures and Algorithms Repo",
   "description":
       "Built a catalogue of LeetCode solutions I've completed throughout my interviewing journey. This repo consits of any interesting questions I want to comeback to and might see again",
@@ -21,7 +21,7 @@ Map<String, String> C2 = {
 };
 
 Map<String, String> C3 = {
-  "image_path": "Scala.png",
+  "image_path": "assets/images/Scala.png",
   "title": "GraphQL to SQL",
   "description":
       "Programmed a CLI program responsible for reading the graphQL files in binary format and translating them to SQL queries to help engineers switch back and forth between different languages with ease",

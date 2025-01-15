@@ -87,12 +87,14 @@ class CarouselCard extends StatelessWidget {
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                              color: Colors.black,
                             ),
                           ),
                           SizedBox(height: 10),
                           Text(
                             desc,
                             style: TextStyle(
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
@@ -103,6 +105,7 @@ class CarouselCard extends StatelessWidget {
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                              color: Colors.black,
                             ),
                           ),
                           SizedBox(height: 10),
@@ -112,13 +115,18 @@ class CarouselCard extends StatelessWidget {
                                   (tool) => Container(
                                     child: Padding(
                                       padding: EdgeInsets.all(10),
-                                      child: Text(tool),
+                                      child: Text(tool,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          )),
                                     ),
                                     height: 40,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(100),
                                       border: Border.all(
-                                          color: Colors.black, width: 2),
+                                        color: Colors.black,
+                                        width: 2,
+                                      ),
                                     ),
                                   ),
                                 )
