@@ -24,124 +24,126 @@ class MenuOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(20),
-      children: <Widget>[
-        Material(
-          child: InkWell(
-            onTap: () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ResumeView(),
+    return Scaffold(
+      body: ListView(
+        padding: const EdgeInsets.all(20),
+        children: <Widget>[
+          Material(
+            child: InkWell(
+              onTap: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResumeView(),
+                  ),
+                ),
+              },
+              child: Padding(
+                padding: EdgeInsets.all(30),
+                child: Row(
+                  children: [
+                    Icon(Icons.attach_file),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "Resume",
+                      style: GoogleFonts.josefinSlab(
+                        textStyle: Theme.of(context).textTheme.displayMedium,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            },
-            child: Padding(
-              padding: EdgeInsets.all(30),
-              child: Row(
-                children: [
-                  Icon(Icons.attach_file),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "Resume",
-                    style: GoogleFonts.josefinSlab(
-                      textStyle: Theme.of(context).textTheme.displayMedium,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+            ),
+          ),
+          Line(),
+          Material(
+            child: InkWell(
+              onTap: () => {
+                js.context
+                    .callMethod('open', ['https://github.com/KaramDanialGit'])
+              },
+              child: Padding(
+                padding: EdgeInsets.all(30),
+                child: Row(
+                  children: [
+                    Icon(SimpleIcons.github),
+                    SizedBox(
+                      width: 10,
                     ),
-                  ),
-                ],
+                    Text(
+                      "Github",
+                      style: GoogleFonts.josefinSlab(
+                        textStyle: Theme.of(context).textTheme.displayMedium,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        Line(),
-        Material(
-          child: InkWell(
-            onTap: () => {
-              js.context
-                  .callMethod('open', ['https://github.com/KaramDanialGit'])
-            },
-            child: Padding(
-              padding: EdgeInsets.all(30),
-              child: Row(
-                children: [
-                  Icon(SimpleIcons.github),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "Github",
-                    style: GoogleFonts.josefinSlab(
-                      textStyle: Theme.of(context).textTheme.displayMedium,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+          Line(),
+          Material(
+            child: InkWell(
+              onTap: () => {
+                js.context.callMethod('open',
+                    ['https://www.linkedin.com/in/karam-danial-523509156/'])
+              },
+              child: Padding(
+                padding: EdgeInsets.all(30),
+                child: Row(
+                  children: [
+                    Icon(SimpleIcons.linkedin),
+                    SizedBox(
+                      width: 10,
                     ),
-                  ),
-                ],
+                    Text(
+                      "LinkedIn",
+                      style: GoogleFonts.josefinSlab(
+                        textStyle: Theme.of(context).textTheme.displayMedium,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        Line(),
-        Material(
-          child: InkWell(
-            onTap: () => {
-              js.context.callMethod('open',
-                  ['https://www.linkedin.com/in/karam-danial-523509156/'])
-            },
-            child: Padding(
-              padding: EdgeInsets.all(30),
-              child: Row(
-                children: [
-                  Icon(SimpleIcons.linkedin),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "LinkedIn",
-                    style: GoogleFonts.josefinSlab(
-                      textStyle: Theme.of(context).textTheme.displayMedium,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+          Line(),
+          Material(
+            child: InkWell(
+              onTap: () => {
+                Navigator.pop(context),
+              },
+              child: Padding(
+                padding: EdgeInsets.all(30),
+                child: Row(
+                  children: [
+                    Text(
+                      "Back",
+                      style: GoogleFonts.josefinSlab(
+                        textStyle: Theme.of(context).textTheme.displayMedium,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        Line(),
-        Material(
-          child: InkWell(
-            onTap: () => {
-              Navigator.pop(context),
-            },
-            child: Padding(
-              padding: EdgeInsets.all(30),
-              child: Row(
-                children: [
-                  Text(
-                    "Back",
-                    style: GoogleFonts.josefinSlab(
-                      textStyle: Theme.of(context).textTheme.displayMedium,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

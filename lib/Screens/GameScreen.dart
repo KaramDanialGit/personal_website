@@ -29,27 +29,25 @@ class _GameScreen extends State<GameScreen> {
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Spacer(),
               RotatingCard(
                 background: "assets/images/HKBackground.jpg",
                 subject: "assets/images/logo_main.png",
                 url: "https://www.hollowknight.com/",
               ),
-              Spacer(),
+              SizedBox(width: 30),
               RotatingCard(
                 background: "assets/images/DSBackground.jpg",
                 subject: "assets/images/ds_logo.png",
                 url:
                     "https://store.steampowered.com/app/374320/DARK_SOULS_III/",
               ),
-              Spacer(),
+              SizedBox(width: 30),
               RotatingCard(
                 background: "assets/images/MGRBackground.jpg",
                 subject: "assets/images/mgr_logo.png",
                 url:
                     "https://store.steampowered.com/app/235460/METAL_GEAR_RISING_REVENGEANCE/",
               ),
-              Spacer(),
             ],
           ),
           Spacer(),

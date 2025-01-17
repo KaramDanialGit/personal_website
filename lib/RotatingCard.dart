@@ -60,6 +60,7 @@ class _RotatingCardState extends State<RotatingCard>
         }
       },
       child: Container(
+        width: MediaQuery.of(context).size.width / 4,
         height: 300,
         child: Center(
           child: MouseRegion(
@@ -83,10 +84,8 @@ class _RotatingCardState extends State<RotatingCard>
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            color: _hovering
-                                ? Colors.white
-                                : Colors.black, // Change border color on hover
-                            width: 2, // Set border width
+                            color: _hovering ? Colors.white : Colors.black,
+                            width: 2,
                           ),
                           boxShadow: _hovering
                               ? [
@@ -127,7 +126,9 @@ class _RotatingCardState extends State<RotatingCard>
                               offset: Offset(0, _opacityAnimation.value * -50),
                               child: Image.asset(
                                 widget.subject,
-                                width: 300,
+                                width: MediaQuery.of(context).size.width < 1000
+                                    ? 200
+                                    : 300,
                               ),
                             ),
                           ),

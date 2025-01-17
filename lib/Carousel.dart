@@ -48,7 +48,6 @@ class _Carousel extends State<Carousel> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
       height: 400,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
