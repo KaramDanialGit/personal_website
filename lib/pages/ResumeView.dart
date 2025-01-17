@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:html';
+import 'dart:js' as js;
 import 'dart:math' as math;
 // The download link
 
@@ -71,8 +72,10 @@ class ResumeView extends StatelessWidget {
                               Icons.sim_card_download_sharp,
                               size: 28,
                             ),
-                            onTap: () =>
-                                {download('assets/pdfs/Nov_Resume_KD.pdf')},
+                            onTap: () => {
+                              js.context.callMethod(
+                                  'open', ['https://karamresume.tiiny.site/']),
+                            },
                           ),
                         ),
                       ),

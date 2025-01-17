@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/Screens/WipScreen.dart';
 import 'NavBar.dart';
 import '../Screens/IntroScreen.dart';
 import '../Screens/GameScreen.dart';

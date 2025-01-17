@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './themeProvider.dart';
-// import './pages/MobileHomePage.dart';
+import './pages/MobileHomePage.dart';
 import './pages/ComputerHomePage.dart';
 
 void main() {
@@ -42,8 +42,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ComputerHomePage(),
+    Widget? screen = MediaQuery.of(context).size.width < 1000
+        ? MobileHomePage()
+        : ComputerHomePage();
+
+    return Scaffold(
+      body: screen,
     );
   }
 }
