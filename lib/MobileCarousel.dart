@@ -50,19 +50,26 @@ class _Carousel extends State<MobileCarousel> {
     return SizedBox(
       width: double.infinity,
       height: 400,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CarouselSlider(
-            items: Cards,
-            options: CarouselOptions(
-              enlargeCenterPage: true,
-              scrollPhysics: BouncingScrollPhysics(),
-            ),
-            carouselController: _controller,
-          ),
-        ],
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: Cards == null ? 0 : Cards?.length,
+        itemBuilder: (context, index) {
+          return Center(child: Cards?[index]);
+        },
       ),
+      // child: Row(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: [
+      //     CarouselSlider(
+      //       items: Cards,
+      //       options: CarouselOptions(
+      //         enlargeCenterPage: true,
+      //         scrollPhysics: BouncingScrollPhysics(),
+      //       ),
+      //       carouselController: _controller,
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

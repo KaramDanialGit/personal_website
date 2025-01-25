@@ -26,7 +26,7 @@ class CarouselCard extends StatelessWidget {
         },
         child: SizedBox(
           height: 300,
-          width: 550,
+          width: MediaQuery.of(context).size.width > 1000 ? 550 : 500,
           child: Card(
             elevation: 10,
             shape: RoundedRectangleBorder(

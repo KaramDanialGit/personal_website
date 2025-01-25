@@ -65,6 +65,7 @@ class _Carousel extends State<Carousel> {
             options: CarouselOptions(
               enlargeCenterPage: true,
               scrollPhysics: BouncingScrollPhysics(),
+              viewportFraction: 0.8,
             ),
             carouselController: _controller,
           ),

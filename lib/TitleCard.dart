@@ -16,7 +16,7 @@ class TitleCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(4),
         color: Theme.of(context).primaryColor,
       ),
-      width: 440,
+      width: MediaQuery.of(context).size.width < 1000 ? 300 : 440,
       height: 70,
       alignment: Alignment.center,
       padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
@@ -26,6 +26,7 @@ class TitleCard extends StatelessWidget {
         style: GoogleFonts.josefinSlab(
           textStyle: Theme.of(context).textTheme.displayMedium,
           fontWeight: FontWeight.bold,
+          fontSize: MediaQuery.of(context).size.width < 1000 ? 30 : 40,
         ),
         duration: const Duration(milliseconds: 50),
       ),

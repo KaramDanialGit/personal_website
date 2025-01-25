@@ -189,6 +189,7 @@ class MobileNavBar extends StatelessWidget {
                         style: GoogleFonts.josefinSlab(
                           textStyle: Theme.of(context).textTheme.displayMedium,
                           fontWeight: FontWeight.bold,
+                          fontSize: 30,
                         ),
                       ),
                     ),
